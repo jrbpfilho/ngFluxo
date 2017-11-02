@@ -1,0 +1,35 @@
+<div class="clearfix">
+    <h3>Lista de Fornecedores</h3>
+    </div>
+    <p>
+      <a [routerLink]="['/fornecedores/novo']" class="btn btn-primary"> Novo Fornecedor</a>
+    </p>
+    
+    <div>
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Código do Fornecedor</th>
+        <th>Nome do Fornecedor</th>
+        <th>Telefone</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+    
+        <th></th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr *ngFor ="let f of fornecedores$ | async as fornecedores; index as i">
+          <td>{{ f.codigoDoFornecedor }}</td>
+          <td>{{ f.nomeDoFornecedor }}</td>
+          <td>{{ f.telefone }}</td>
+          <td>{{ f.cidade }}</td>
+          <td>{{ f.estado }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    
+    
+    

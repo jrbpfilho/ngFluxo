@@ -1,0 +1,51 @@
+<h2>Lista de Categorias</h2>
+
+<p>
+  <a [routerLink]="['/categorias/novo']" class="btn btn-primary"> Nova Categoria</a>
+</p>
+
+<div>
+<table class="table">
+<thead>
+  <tr>
+    <th>Id</th>
+    <th>Nome da Categoria</th>
+    <th></th>
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor ="let c of categorias$ | async as categorias; index as i">
+      <td>{{ c.id }}</td>
+      <td>{{ c.nomeDaCategoria }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<h2>Lista de SubCategorias</h2>
+
+<p>
+    <a [routerLink]="['/categorias/subcategorias/novo']" class="btn btn-primary"> Nova SubCategoria</a>
+</p>
+
+<div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id da Categoria</th>
+      <th> Nome da SubCategoria</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of subCategorias$ | async as subCategorias">
+        <td>{{ s.categoriaId }}</td>
+        <td> {{s.nomeDaSubCategoria}}</td>
+        <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+

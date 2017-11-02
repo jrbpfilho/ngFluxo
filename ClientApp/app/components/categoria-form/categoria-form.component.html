@@ -1,0 +1,19 @@
+<h1>Nova Categoria</h1>
+<div class="col-sm-6">
+
+    <p>
+        {{ categoria | json }}
+      </p>
+
+<form (ngSubmit)="submit()">
+
+    <div class="form-group">
+      <label for="nomeDaCategoria">Nome da Categoria</label>
+      <input id="nomeDaCategoria" type="text" class="form-control" [(ngModel)]="categoria.nomeDaCategoria" name="nomeDaCategoria">
+    </div>
+    
+      <button class="btn btn-primary">Cadastrar</button>
+</form>
+
+
+</div>

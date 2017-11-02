@@ -1,0 +1,53 @@
+<h1>Novo Fornecedor</h1>
+<div class="col-sm-6">
+
+<form (ngSubmit)="submit()">
+
+    <div class="form-group">
+      <label for="codigoDoFornecedor">Código do Fornecedor</label>
+      <input id="codigoDoFornecedor" type="text" class="form-control" [(ngModel)]="fornecedores.codigoDoFornecedor" name="codigoDoFornecedor">
+    </div>
+    <div class="form-group">
+      <label for="nomeDoFornecedor">Nome do Fornecedor</label>
+      <input id="nomeDoFornecedor" type="text" class="form-control" [(ngModel)]="fornecedores.nomeDoFornecedor" name="nomeDoFornecedor">
+    </div>
+    <div class="form-group">
+      <label for="cpf">CPF</label>
+      <input id="cpf" type="text" class="form-control" [(ngModel)]="fornecedores.cpf" name="cpf">
+    </div>
+    <div class="form-group">
+        <label for="cnpj">CNPJ</label>
+        <input id="cnpj" type="text" class="form-control" [(ngModel)]="fornecedores.cnpj" name="cnpj">
+      </div>
+    
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input id="telefone" type="text" class="form-control" [(ngModel)]="fornecedores.telefone" name="telefone">
+    </div>
+    <div class="form-group">
+      <label for="endereco">Endereço</label>
+      <input id="endereco" type="text" class="form-control" [(ngModel)]="fornecedores.endereco" name="endereco">
+    </div>
+
+    <div class="form-group">
+        <label for="complemento">Complemento</label>
+        <input id="complemento" type="text" class="form-control" [(ngModel)]="fornecedores.complemento" name="complemento">
+      </div>
+
+      <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <input id="cidade" type="text" class="form-control" [(ngModel)]="fornecedores.cidade" name="cidade">
+        </div>
+      
+        <div class="form-group">
+            <label for="estado">Estado</label>
+            <input id="estado" type="text" class="form-control" [(ngModel)]="fornecedores.estado" name="estado">
+          </div>
+      <button class="btn btn-primary">Cadastrar</button>
+</form>
+<p>
+  {{ fornecedores | json }}
+</p>
+</div>
+
+ 
